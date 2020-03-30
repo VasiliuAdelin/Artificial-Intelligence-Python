@@ -1,0 +1,14 @@
+{%extends 'basePage.htm' %}
+{% load static %}
+{% static "images" as baseUrl %}
+
+{% block content %}
+        <div class="container">
+                <form class="formContactContainer" method="POST" action="resultRender">
+
+                        {% csrf_token %}
+                <textarea type="text" class="inputTextBoxArea" placeholder="Descrieti filmul pe care il cautati..." name="searchThis" cols="30" rows="10"></textarea>
+                <button class="butonTrimitere" type="submit" name="trimite">Cauta!</button>
+                </form>
+        </div>
+{% endblock %}

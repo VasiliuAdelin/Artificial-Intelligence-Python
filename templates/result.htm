@@ -1,0 +1,23 @@
+{% extends 'basePage.htm' %} 
+
+{% block content %}
+
+<div class="grid-container">
+    {% for elem in result %}
+    <!-- <button type="button" class="button left"> ...previous movie</button> -->
+    <div class="grid-item">
+        <h1> {{ elem.0 }} </h1>
+        <img src="{{ elem.5 }}" alt=""> 
+        <br>
+        <a href="{{ elem.1 }}">Go to the IMDb website </a>
+        <p>{{ elem.2 }}</p>
+        <h1>Rating metacritic:{{ elem.3 }}/100</h1>
+        <h1> Anul lansarii: {{ elem.4 }}</h1>
+    </div>
+    <!-- <button type="button" class="button right"> next movie...</button> -->
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}
